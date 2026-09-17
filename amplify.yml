@@ -7,7 +7,7 @@ backend:
         - echo "AWS_APP_ID=$AWS_APP_ID"
     build:
       commands:
-        - npm ci --cache .npm --prefer-offline
+        - npm install
         - npx ampx pipeline-deploy --branch $AWS_BRANCH --app-id $AWS_APP_ID --debug
 frontend:
   phases:
